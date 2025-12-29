@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header>
+   <nav class="navbar">
+       <div class="logo">SI-Adzkia</div>
+       <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    </nav>
+</header>
+
+<main class="about">
+    <div class="about-card">
+        <h1>Tentang Kami</h1>
+
+        <div class="title-divider">
+          <span class="line"></span>
+          <i class="icon">👤💻</i>
+          <span class="line"></span>
+        </div>
+
+        <p class="about-text">
+          <strong>Profil Singkat</strong>, Kami adalah mahasiswa Program Studi
+          Sistem Informasi.
+        </p>
+
+        <p class="about-text">
+          Sebagai mahasiswa Sistem Informasi, kami memiliki minat pada pengembangan website dan pemanfaatan teknologi informasi.
+           Kami menguasai dasar pengembangan web menggunakan HTML dan CSS, terbiasa menggunakan Visual Studio Code, serta memahami 
+           prinsip dasar desain antarmuka untuk menghasilkan tampilan yang fungsional. Didukung kemampuan kerja tim, komunikasi yang baik,
+           dan motivasi belajar yang tinggi, kami terus mengembangkan diri mengikuti perkembangan teknologi.
+        </p>
+
+       <h1>Tim Kami</h1>
+
+<div class="team-container">
+
+  <!-- ANGGOTA 1 -->
+  <div class="team-card">
+    <img src="../assets/img/putri.jpg" alt="Rahmi Sucia Putri">
+    <h3>Rahmi Sucia Putri</h3>
+    <p>Sistem Informasi</p>
+
+    <button class="btn-bio" onclick="toggleBio(this)">Lihat Biodata</button>
+
+    <div class="bio hidden">
+      <p><b>Nama:</b> Rahmi Sucia Putri</p>
+      <p><b>Asal:</b> Pesisir Selatan</p>
+      <p><b>Jurusan:</b> Sistem Informasi</p>
+
+      <p><b>Pendidikan & Pengalaman:</b> Mahasiswa Sistem Informasi</p>
+
+      <p><b>Keahlian:</b> HTML, CSS, UI Design</p>
+
+      <p><b>Visi & Misi:</b> Mengembangkan sistem yang bermanfaat dan efisien</p>
+
+      <p><b>Soft Skills:</b> Kerja tim, komunikasi, disiplin</p>
+    </div>
+  </div>
+
+  <!-- ANGGOTA 2 -->
+  <div class="team-card">
+    <img src="../assets/img/Nabilla.jpeg" alt="Nabila Rahayu Putri">
+    <h3>Nabila Rahayu Putri</h3>
+    <p>Sistem Informasi</p>
+
+    <button class="btn-bio" onclick="toggleBio(this)">Lihat Biodata</button>
+
+    <div class="bio hidden">
+      <p><b>Nama:</b> Nabila Rahayu Putri</p>
+      <p><b>Asal:</b> Kota Padang</p>
+      <p><b>Jurusan:</b> Sistem Informasi</p>
+
+      <p><b>Pendidikan & Pengalaman:</b> Mahasiswa aktif</p>
+
+      <p><b>Keahlian:</b> Figma, HTML, CSS</p>
+
+      <p><b>Visi & Misi:</b> Desain yang user-friendly</p>
+
+      <p><b>Soft Skills:</b> Kreatif, kerja tim</p>
+    </div>
+  </div>
+
+  <!-- ANGGOTA 3 -->
+  <div class="team-card">
+    <img src="../assets/img/jeni.jpeg" alt="Jenisa Ananda Brina">
+    <h3>Jenisa Ananda Brina</h3>
+    <p>Sistem Informasi</p>
+
+    <button class="btn-bio" onclick="toggleBio(this)">Lihat Biodata</button>
+
+    <div class="bio hidden">
+      <p><b>Nama:</b> Jenisa Ananda Brina</p>
+      <p><b>Asal:</b> Jawa Barat</p>
+      <p><b>Jurusan:</b> Sistem Informasi</p>
+
+      <p><b>Pendidikan & Pengalaman:</b> Mahasiswa Sistem Informasi</p>
+
+      <p><b>Keahlian:</b> HTML, CSS</p>
+
+      <p><b>Visi & Misi:</b> Berkembang di bidang IT</p>
+
+      <p><b>Soft Skills:</b> Adaptif, tanggung jawab</p>
+    </div>
+  </div>
+
+  <!-- ANGGOTA 4 -->
+  <div class="team-card">
+    <img src="../assets/img/Mutiara.jpeg" alt="Mutiara Guska Dewi">
+    <h3>Mutiara Guska Dewi</h3>
+    <p>Sistem Informasi</p>
+
+    <button class="btn-bio" onclick="toggleBio(this)">Lihat Biodata</button>
+
+    <div class="bio hidden">
+      <p><b>Nama:</b> Mutiara Guska Dewi</p>
+      <p><b>Asal:</b> Lampung</p>
+      <p><b>Jurusan:</b> Sistem Informasi</p>
+
+      <p><b>Pendidikan & Pengalaman:</b> Mahasiswa aktif</p>
+
+      <p><b>Keahlian:</b> Microsoft Office, HTML</p>
+
+      <p><b>Visi & Misi:</b> Menguasai teknologi informasi</p>
+
+      <p><b>Soft Skills:</b> Komunikatif, kerja tim</p>
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<script>
+function toggleBio(button) {
+  // ambil semua biodata
+  const allBios = document.querySelectorAll(".bio");
+  const allButtons = document.querySelectorAll(".btn-bio");
+
+  // tutup semua biodata KECUALI yang diklik
+  allBios.forEach(bio => {
+    if (bio !== button.nextElementSibling) {
+      bio.classList.add("hidden");
+    }
+  });
+
+  // reset semua tombol
+  allButtons.forEach(btn => {
+    if (btn !== button) {
+      btn.innerText = "Lihat Biodata";
+    }
+  });
+
+  // toggle biodata yang diklik
+  const bio = button.nextElementSibling;
+  bio.classList.toggle("hidden");
+
+  button.innerText = bio.classList.contains("hidden")
+    ? "Lihat Biodata"
+    : "Tutup Biodata";
+}
+</script>
+
+
+</body>
+</html>
