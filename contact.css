@@ -1,0 +1,146 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* BACKGROUND */
+.contact {
+  min-height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* CONTAINER */
+.contact-box {
+  display: flex;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* FORM CARD */
+.contact-form {
+  flex: 1;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* INPUT */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1f2f3f;
+}
+
+/* INFO KONTAK */
+.contact-info {
+  flex: 1;
+  color: #2c3e50;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* SOCIAL */
+.social a {
+  display: block;
+  color: #2c3e50;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-box {
+    flex-direction: column;
+  }
+}
+
+/* ===============================
+   INFORMASI KONTAK PER ORANG
+   =============================== */
+
+.info-person {
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-person:last-child {
+    border-bottom: none;
+}
+
+.info-person h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.info-person p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.info-person .social {
+    margin-top: 8px;
+}
+
+.info-person .social a {
+    margin-right: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #4b6cb7;
+}
+
+.info-person .social a:hover {
+    text-decoration: underline;
+}
