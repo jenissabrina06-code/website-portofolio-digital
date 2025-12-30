@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        height: 60vh;
+        padding: 20px;
+    }
+}
