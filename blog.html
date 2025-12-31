@@ -2,233 +2,66 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Blog Saya</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengalaman Belajar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            width: 500px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .more-text {
+            display: none;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 16px;
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">SI-Adzkia</div>
-    <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- HEADER BLOG -->
-<section class="blog-header">
-    <h1>Blog Kami</h1>
+<div class="card">
+    <h2>Pengalaman Belajar HTML & CSS</h2>
+    <p>10 Desember 2025</p>
     <p>
-        Berisi pengalaman belajar dan project yang Kami pelajari
-        dalam bidang web, multimedia, dan pengembangan aplikasi.
+        Saya mulai mempelajari struktur dasar website menggunakan layout sederhana.
     </p>
-</section>
 
-<!-- BLOG LIST -->
-<section class="blog-container">
-
-    <!-- CARD 1 -->
-    <div class="blog-card">
-        <div class="blog-img">
-           <img src="../assets/img/logo1.jpeg" alt="Logo">
-        </div>
-        <div class="blog-content">
-            <h3>Pengalaman Belajar HTML & CSS</h3>
-            <span>10 Januari 2024</span>
-            <p>
-                Kami mempelajari HTML dan CSS sebagai dasar pengembangan web,
-                mulai dari struktur halaman, pengaturan layout, hingga
-                pembuatan tampilan website yang rapi, responsif, dan
-                nyaman digunakan.
-            </p>
-        </div>
+    <div class="more-text" id="moreText">
+        <p>
+            Saya belajar tentang tag HTML seperti <b>div</b>, <b>header</b>, dan 
+            <b>footer</b>. Selain itu, saya juga mempelajari CSS untuk mengatur warna,
+            margin, padding, dan layout agar tampilan website lebih menarik.
+        </p>
     </div>
 
-    <!-- CARD 2 -->
-    <div class="blog-card">
-        <div class="blog-img">
-         <img src="../assets/img/logo2.jpeg" alt="Logo">
-        </div>
-        <div class="blog-content">
-            <h3>Pengalaman Menggunakan Adobe Animate</h3>
-            <span>15 Desember 2025</span>
-            <p>
-                Dalam pembelajaran desain dan multimedia, Kami menggunakan
-                Adobe Animate untuk membuat animasi sederhana dan konten
-                interaktif yang dapat digunakan pada media pembelajaran
-                maupun presentasi digital.
-            </p>
-        </div>
-    </div>
+    <button onclick="toggleText()" id="btnText">Baca Selengkapnya</button>
+</div>
 
-    <!-- CARD 3 -->
-    <div class="blog-card">
-        <div class="blog-img">
-           <img src="../assets/img/logo3.jpeg" alt="Logo">
-        </div>
-        <div class="blog-content">
-            <h3>Pengalaman Belajar Android Studio</h3>
-            <span>1 September 2025</span>
-            <p>
-                Kami mempelajari Android Studio sebagai tools pengembangan
-                aplikasi Android, memahami pembuatan layout menggunakan XML,
-                serta penerapan logika dasar pemrograman dalam sebuah aplikasi.
-            </p>
-        </div>
-    </div>
+<script>
+    function toggleText() {
+        const text = document.getElementById("moreText");
+        const btn = document.getElementById("btnText");
 
-</section>
-
-<!-- STYLE -->
-<style>
-
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
-}
-
-body {
-    background-color: #f4f7fb;
-    color: #333;
-}
-
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 40px;
-    background-color: #1e293b;
-}
-
-.logo {
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding-bottom: 4px;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: #60a5fa;
-    border-bottom: 2px solid #60a5fa;
-}
-
-/* HEADER BLOG */
-.blog-header {
-    text-align: center;
-    padding: 50px 20px;
-    background: #ffffff;
-}
-
-.blog-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.blog-header p {
-    color: #555;
-    max-width: 700px;
-    margin: auto;
-}
-
-/* BLOG CONTAINER */
-.blog-container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-/* BLOG CARD */
-.blog-card {
-    background: white;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-}
-
-.blog-card:hover {
-    transform: translateY(-6px);
-}
-
-/* GAMBAR */
-.blog-img {
-    height: 180px;
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.blog-img img {
-    width: 80%;
-    max-height: 120px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.blog-card:hover .blog-img img {
-    transform: scale(1.05);
-}
-
-/* ISI BLOG */
-.blog-content {
-    padding: 20px;
-}
-
-.blog-content h3 {
-    font-size: 20px;
-    margin-bottom: 6px;
-}
-
-.blog-content span {
-    font-size: 14px;
-    color: #777;
-}
-
-.blog-content p {
-    margin-top: 12px;
-    line-height: 1.6;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
+        if (text.style.display === "none") {
+            text.style.display = "block";
+            btn.innerText = "Tutup";
+        } else {
+            text.style.display = "none";
+            btn.innerText = "Baca Selengkapnya";
+        }
     }
-}
-
-</style>
-
-<script src="js/main.js"></script>
-</body>
-</html>
-
+</script>
 
 </body>
 </html>
